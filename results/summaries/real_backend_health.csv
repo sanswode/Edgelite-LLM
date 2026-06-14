@@ -1,0 +1,3 @@
+backend,ok,message,base_url
+edge,True,ok model=qwen2.5-3b-instruct-q4_k_m.gguf,local://llama-cpp
+cloud,True,ok workers=8 emulated-cloud,emulated://single-machine-cloud

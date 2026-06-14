@@ -1,0 +1,13 @@
+network,network_label,route,count,ratio,route_label
+congested,Congested,cache,743,0.743,Cache
+congested,Congested,cloud,169,0.169,Cloud
+congested,Congested,edge,88,0.088,Edge
+mobile_4g5g,4G/5G,cache,743,0.743,Cache
+mobile_4g5g,4G/5G,cloud,175,0.175,Cloud
+mobile_4g5g,4G/5G,edge,82,0.082,Edge
+weak,Weak,cache,743,0.743,Cache
+weak,Weak,cloud,143,0.143,Cloud
+weak,Weak,edge,114,0.114,Edge
+wifi_good,WiFi Good,cache,743,0.743,Cache
+wifi_good,WiFi Good,cloud,175,0.175,Cloud
+wifi_good,WiFi Good,edge,82,0.082,Edge
