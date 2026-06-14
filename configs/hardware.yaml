@@ -1,0 +1,15 @@
+{
+  "gpu_vram_gb": 8.0,
+  "gpu_index": 0,
+  "gpu_name": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "safe_utilization": 0.88,
+  "fragment_gb": 0.35,
+  "runtime_gb": 0.55,
+  "seed": 20260611,
+  "prefix_cache_capacity_mb": 1100.0,
+  "edge_recommended_context": 2048,
+  "edge_recommended_batch": 256,
+  "edge_recommended_ubatch": 256,
+  "edge_recommended_parallel": 1,
+  "edge_recommended_threads": 12
+}

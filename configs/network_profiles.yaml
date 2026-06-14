@@ -1,0 +1,36 @@
+{
+  "profiles": [
+    {
+      "name": "wifi_good",
+      "label": "WiFi Good",
+      "rtt_ms": 10.0,
+      "bandwidth_mbps": 100.0,
+      "loss_pct": 0.0,
+      "jitter_ms": 4.0
+    },
+    {
+      "name": "mobile_4g5g",
+      "label": "4G/5G",
+      "rtt_ms": 40.0,
+      "bandwidth_mbps": 20.0,
+      "loss_pct": 0.5,
+      "jitter_ms": 10.0
+    },
+    {
+      "name": "congested",
+      "label": "Congested",
+      "rtt_ms": 80.0,
+      "bandwidth_mbps": 5.0,
+      "loss_pct": 1.0,
+      "jitter_ms": 18.0
+    },
+    {
+      "name": "weak",
+      "label": "Weak",
+      "rtt_ms": 150.0,
+      "bandwidth_mbps": 1.0,
+      "loss_pct": 2.0,
+      "jitter_ms": 30.0
+    }
+  ]
+}

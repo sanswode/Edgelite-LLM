@@ -1,0 +1,90 @@
+{
+  "models": {
+    "local": {
+      "name": "Qwen3-1.7B-Q4",
+      "prefill_tps": 280.0,
+      "decode_tps": 42.0,
+      "quality_base": 0.79,
+      "difficulty_penalty": 0.18,
+      "weight_gb": 1.05,
+      "runtime_gb": 0.28,
+      "layers": 24,
+      "kv_heads": 4,
+      "head_dim": 128,
+      "bytes_per_element": 2
+    },
+    "edge": {
+      "name": "Qwen3-4B-Q4",
+      "prefill_tps": 520.0,
+      "decode_tps": 68.0,
+      "quality_base": 0.88,
+      "difficulty_penalty": 0.11,
+      "weight_gb": 2.85,
+      "runtime_gb": 0.55,
+      "layers": 28,
+      "kv_heads": 4,
+      "head_dim": 128,
+      "bytes_per_element": 2
+    },
+    "cloud": {
+      "name": "Qwen3-8B-Q4",
+      "prefill_tps": 760.0,
+      "decode_tps": 118.0,
+      "quality_base": 0.96,
+      "difficulty_penalty": 0.06,
+      "weight_gb": 0.0,
+      "runtime_gb": 0.0,
+      "layers": 36,
+      "kv_heads": 8,
+      "head_dim": 128,
+      "bytes_per_element": 2
+    }
+  },
+  "vram_figure_models": [
+    {
+      "name": "0.6B",
+      "params_billion": 0.6,
+      "quant_bits": 4,
+      "overhead": 0.12,
+      "layers": 20,
+      "kv_heads": 4,
+      "head_dim": 128
+    },
+    {
+      "name": "1.7B",
+      "params_billion": 1.7,
+      "quant_bits": 4,
+      "overhead": 0.12,
+      "layers": 24,
+      "kv_heads": 4,
+      "head_dim": 128
+    },
+    {
+      "name": "4B",
+      "params_billion": 4.0,
+      "quant_bits": 4,
+      "overhead": 0.15,
+      "layers": 28,
+      "kv_heads": 4,
+      "head_dim": 128
+    },
+    {
+      "name": "8B",
+      "params_billion": 8.0,
+      "quant_bits": 4,
+      "overhead": 0.18,
+      "layers": 36,
+      "kv_heads": 8,
+      "head_dim": 128
+    },
+    {
+      "name": "13B",
+      "params_billion": 13.0,
+      "quant_bits": 4,
+      "overhead": 0.2,
+      "layers": 40,
+      "kv_heads": 8,
+      "head_dim": 128
+    }
+  ]
+}

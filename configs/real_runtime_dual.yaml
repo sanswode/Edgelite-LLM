@@ -1,0 +1,53 @@
+{
+  "request": {
+    "subset_size": 24,
+    "warmup_size": 2,
+    "temperature": 0.2,
+    "max_tokens": 64,
+    "timeout_s": 180,
+    "seed": 20260612,
+    "semantic_threshold": 0.9,
+    "privacy_threshold": 0.68,
+    "edge_transport_factor": 0.22,
+    "cache_transport_factor": 0.04
+  },
+  "strategies": [
+    "cloud_only",
+    "edge_only",
+    "no_privacy",
+    "ours"
+  ],
+  "edge": {
+    "enabled": true,
+    "backend": "llama_cpp_local",
+    "base_url": "local://llama-cpp",
+    "model": "Llama-3.2-1B-Instruct-Q4_K_M",
+    "api_key": "EMPTY",
+    "label": "Edge Local",
+    "model_path": "models/Llama-3.2-1B-Instruct-GGUF/Llama-3.2-1B-Instruct-Q4_K_M.gguf",
+    "chat_format": "",
+    "n_ctx": 4096,
+    "n_gpu_layers": -1,
+    "n_batch": 256,
+    "n_ubatch": 256,
+    "n_threads": 12,
+    "n_threads_batch": 12
+  },
+  "cloud": {
+    "enabled": false,
+    "backend": "llama.cpp",
+    "base_url": "http://127.0.0.1:8003",
+    "model": "cloud-model",
+    "api_key": "EMPTY",
+    "label": "Cloud Remote"
+  },
+  "device_profile": {
+    "gpu_index": 0,
+    "recommended_model_scale": "1B Q4 GGUF edge + external cloud endpoint",
+    "recommended_ctx": 4096,
+    "recommended_n_gpu_layers": -1,
+    "recommended_n_batch": 256,
+    "recommended_n_ubatch": 256,
+    "recommended_parallel": 1
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "seed_values": [20260612, 20260613, 20260614, 20260615, 20260616],
+  "strategies": [
+    "cloud_only",
+    "edge_only",
+    "static_threshold",
+    "ours"
+  ],
+  "request_count_per_network": 100,
+  "scenario_defaults": {
+    "arrival_label": "arrival_medium",
+    "worker_label": "workers_8",
+    "context_label": "ctx_2048"
+  },
+  "arrival_mean_ms": {
+    "arrival_high": 320.0,
+    "arrival_medium": 680.0,
+    "arrival_low": 1200.0
+  },
+  "cloud_parallelism": {
+    "workers_4": 4.0,
+    "workers_8": 8.0,
+    "workers_12": 12.0
+  },
+  "context_targets": {
+    "ctx_1024": 1024,
+    "ctx_2048": 2048,
+    "ctx_4096": 4096
+  },
+  "representative_seed_rule": "Select the Ours seed with the highest mean_quality; break ties with lower mean_e2e_ms.",
+  "model_compare": {
+    "allowed_routes": ["edge", "cloud"],
+    "edge_profiles": {
+      "Qwen2.5-0.5B": {
+        "name": "Qwen2.5-0.5B-Q4",
+        "prefill_tps": 760.0,
+        "decode_tps": 125.0,
+        "quality_base": 0.80,
+        "difficulty_penalty": 0.16,
+        "weight_gb": 0.86,
+        "runtime_gb": 0.20,
+        "layers": 24,
+        "kv_heads": 2,
+        "head_dim": 128,
+        "bytes_per_element": 2
+      },
+      "Llama-3.2-1B": {
+        "name": "Llama-3.2-1B-Q4",
+        "prefill_tps": 620.0,
+        "decode_tps": 96.0,
+        "quality_base": 0.79,
+        "difficulty_penalty": 0.17,
+        "weight_gb": 1.08,
+        "runtime_gb": 0.24,
+        "layers": 16,
+        "kv_heads": 8,
+        "head_dim": 64,
+        "bytes_per_element": 2
+      },
+      "TinyLlama-1.1B": {
+        "name": "TinyLlama-1.1B-Q4",
+        "prefill_tps": 700.0,
+        "decode_tps": 110.0,
+        "quality_base": 0.76,
+        "difficulty_penalty": 0.19,
+        "weight_gb": 0.98,
+        "runtime_gb": 0.22,
+        "layers": 22,
+        "kv_heads": 4,
+        "head_dim": 64,
+        "bytes_per_element": 2
+      },
+      "Gemma-2-2B": {
+        "name": "Gemma-2-2B-Q4",
+        "prefill_tps": 360.0,
+        "decode_tps": 55.0,
+        "quality_base": 0.86,
+        "difficulty_penalty": 0.11,
+        "weight_gb": 1.78,
+        "runtime_gb": 0.35,
+        "layers": 26,
+        "kv_heads": 4,
+        "head_dim": 128,
+        "bytes_per_element": 2
+      },
+      "Qwen2.5-3B": {
+        "name": "Qwen2.5-3B-Q4",
+        "prefill_tps": 330.0,
+        "decode_tps": 52.0,
+        "quality_base": 0.82,
+        "difficulty_penalty": 0.13,
+        "weight_gb": 2.08,
+        "runtime_gb": 0.38,
+        "layers": 28,
+        "kv_heads": 4,
+        "head_dim": 128,
+        "bytes_per_element": 2
+      }
+    }
+  }
+}

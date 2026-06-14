@@ -1,0 +1,41 @@
+{
+  "request": {
+    "subset_size": 72,
+    "warmup_size": 3,
+    "temperature": 0.2,
+    "max_tokens": 128,
+    "timeout_s": 300,
+    "seed": 20260611,
+    "semantic_threshold": 0.9,
+    "privacy_threshold": 0.68
+  },
+  "strategies": [
+    "edge_only",
+    "ours"
+  ],
+  "edge": {
+    "enabled": true,
+    "backend": "llama.cpp",
+    "base_url": "http://127.0.0.1:8002",
+    "model": "edge-model",
+    "api_key": "EMPTY",
+    "label": "Edge"
+  },
+  "cloud": {
+    "enabled": false,
+    "backend": "llama.cpp",
+    "base_url": "http://127.0.0.1:8003",
+    "model": "cloud-model",
+    "api_key": "EMPTY",
+    "label": "Cloud"
+  },
+  "device_profile": {
+    "gpu_index": 0,
+    "recommended_model_scale": "4B Q4 GGUF",
+    "recommended_ctx": 2048,
+    "recommended_n_gpu_layers": -1,
+    "recommended_n_batch": 256,
+    "recommended_n_ubatch": 256,
+    "recommended_parallel": 1
+  }
+}

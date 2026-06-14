@@ -1,0 +1,27 @@
+# Core scientific stack
+numpy>=2.0
+pandas>=2.0
+matplotlib>=3.8
+scipy>=1.12
+scikit-learn>=1.4
+pyyaml>=6.0
+tqdm>=4.66
+
+# Service / HTTP / monitoring
+fastapi>=0.110
+uvicorn>=0.30
+openai>=1.0
+requests>=2.31
+psutil>=5.9
+pynvml>=11.5
+
+# LLM / embedding utilities
+transformers>=4.45
+sentence-transformers>=3.0
+accelerate>=0.30
+
+# Notes:
+# 1) GPU PyTorch is intentionally installed separately because it depends on
+#    your CUDA version and platform.
+# 2) llama-cpp-python is also installed separately for local GGUF experiments
+#    on Windows, because its CUDA build often requires machine-specific setup.

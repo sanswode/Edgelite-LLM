@@ -1,0 +1,31 @@
+{
+  "dataset_size": 1000,
+  "privacy_dataset_size": 600,
+  "semantic_thresholds": [0.8, 0.85, 0.9, 0.95],
+  "strategies": [
+    "cloud_only",
+    "edge_only",
+    "static_threshold",
+    "semantic_cache_only",
+    "no_privacy",
+    "ours"
+  ],
+  "ablation_methods": [
+    "full",
+    "wo_scheduler",
+    "wo_semantic_cache",
+    "wo_kv_cache",
+    "wo_privacy_gate"
+  ],
+  "scheduler_weights": {
+    "alpha": 0.56,
+    "beta": 0.12,
+    "gamma": 0.1,
+    "lambda": 0.14,
+    "eta": 0.08
+  },
+  "privacy_threshold": 0.68,
+  "semantic_threshold": 0.88,
+  "cache_capacity": 220,
+  "queue_seed_offset": 37
+}
